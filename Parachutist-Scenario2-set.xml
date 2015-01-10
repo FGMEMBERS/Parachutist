@@ -23,7 +23,7 @@ Creare Parachutist Model for FlightGear
   </panel>
 
   <model>
-   <path archive="y">Aircraft/Creare_Parachutist/Scenario2/Models/FlightGearParachutistModelDefinition.xml</path>
+   <path archive="y">Aircraft/Creare_Parachutist/Models/FlightGearParachutistModelDefinition.xml</path>
   </model>
 
   <presets>
