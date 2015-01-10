@@ -1,6 +1,6 @@
 <PropertyList>
 
-	  <path>defp.ac</path>
+	  <path>Parachutist.ac</path>
 	  <offsets>
 	    <heading-deg>90</heading-deg>
 	    <pitch-deg>90</pitch-deg>   
@@ -571,19 +571,4 @@
 	    </axis>
 	  </animation>
 
-	  <!-- flow lines -->
-
-	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/axes.xml</path>
-	  </model>
-
-	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/flowlines-2d.xml</path>
-	  </model>
-
-	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/flowlines-3d.xml</path>
-	  </model>
-
-	</PropertyList>
-
+</PropertyList>

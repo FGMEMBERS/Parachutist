@@ -1,5 +1,3 @@
-var dialog_config = gui.Dialog.new("/sim/gui/dialogs/parachutist/config/dialog",
-				   "Aircraft/Creare_Parachutist/Dialogs/config.xml");
 var dialog_pose = gui.Dialog.new("/sim/gui/dialogs/parachutist/pose/dialog",
 				   "Aircraft/Creare_Parachutist/Dialogs/pose.xml");
 

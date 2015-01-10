@@ -18,12 +18,16 @@ Creare Parachutist Model for FlightGear
    <splash-texture>Aircraft/Creare_Parachutist/Parachutist-splash.jpg</splash-texture>
   </startup>
 
+    <sound>
+        <path>Aircraft/Creare_Parachutist/generic-sound.xml</path>
+    </sound>
+
   <panel>
    <visibility archive="n">false</visibility>
   </panel>
 
   <model>
-   <path archive="y">Aircraft/Creare_Parachutist/Models/FlightGearParachutistModelDefinition.xml</path>
+   <path archive="y">Aircraft/Creare_Parachutist/Models/Parachutist.xml</path>
   </model>
 
   <presets>
@@ -41,16 +45,10 @@ Creare Parachutist Model for FlightGear
    </config>
   </view>
 
-  <submodels>
-    <serviceable type="bool">1</serviceable>
-    <path>Aircraft/Creare_Parachutist/Models/submodels.xml</path>
-  </submodels>
-
   <multiplay>
     <chat_display>1</chat_display>
     <generic>
       <int type="bool">0</int>  <!-- smoke -->
-      <int type="bool">0</int>  <!-- trajectory markers -->
     </generic>
   </multiplay>
 
@@ -80,45 +78,6 @@ Creare Parachutist Model for FlightGear
 
  <controls>
    <smoke alias="/sim/multiplay/generic/int[0]"/>
-   <trajectory-markers alias="/sim/multiplay/generic/int[1]"/>
  </controls>
 
-
-
- <!--<input>
-  <keyboard>
-   <key n="79">
-    <name>O</name>
-    <desc>Open aerotow hook</desc>
-    <binding>
-     <command>property-assign</command>
-     <property>/sim/hitches/aerotow/open</property>
-     <value type="bool">true</value>
-    </binding>
-   </key>
-   <key n="100">
-     <name>d</name>
-     <desc>Open/Close door</desc>
-     <binding>
-       <command>nasal</command>
-       <script>
-         if(getprop("controls/door[0]") > 0) {
-           interpolate("controls/door[0]", 0, 1);
-         } else {
-           interpolate("controls/door[0]", 1, 1);
-         }
-       </script>
-     </binding>
-   </key>
-   <key n="111">
-    <name>o</name>
-    <desc>Lock aerotow hook</desc>
-     <binding>
-      <command>property-assign</command>
-      <property>/sim/hitches/aerotow/open</property>
-      <value type="bool">false</value>
-    </binding>
-   </key>
-  </keyboard>
- </input>-->
 </PropertyList>
