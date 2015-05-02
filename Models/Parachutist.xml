@@ -8,7 +8,7 @@
 	  </offsets>
 
 	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/smokeW.xml</path>
+	    <path>Aircraft/Parachutist/Models/smokeW.xml</path>
 	    <offsets>
 	      <x-m> -1.0</x-m>
 	      <y-m> 0.0</y-m>

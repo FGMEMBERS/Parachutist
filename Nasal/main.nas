@@ -1,5 +1,5 @@
 var dialog_pose = gui.Dialog.new("/sim/gui/dialogs/parachutist/pose/dialog",
-				   "Aircraft/Creare_Parachutist/Dialogs/pose.xml");
+				   "Aircraft/Parachutist/Dialogs/pose.xml");
 
 var move_sec = 0.75;		# time to complete all joint motions
 var end_simulation_agl = 10; # end run below the height (ft)

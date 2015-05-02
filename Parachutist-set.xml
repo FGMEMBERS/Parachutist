@@ -15,11 +15,11 @@ Creare Parachutist Model for FlightGear
   <aero>flightDynamicsModel</aero>
 
   <startup>
-   <splash-texture>Aircraft/Creare_Parachutist/Parachutist-splash.jpg</splash-texture>
+   <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
   </startup>
 
     <sound>
-        <path>Aircraft/Creare_Parachutist/generic-sound.xml</path>
+        <path>Aircraft/Parachutist/generic-sound.xml</path>
     </sound>
 
   <panel>
@@ -27,7 +27,7 @@ Creare Parachutist Model for FlightGear
   </panel>
 
   <model>
-   <path archive="y">Aircraft/Creare_Parachutist/Models/Parachutist.xml</path>
+   <path archive="y">Aircraft/Parachutist/Models/Parachutist.xml</path>
   </model>
 
   <presets>
@@ -67,13 +67,13 @@ Creare Parachutist Model for FlightGear
 
  <nasal>
   <Creare>
-   <file>Aircraft/Creare_Parachutist/Nasal/angle-trans.nas</file>
-   <file>Aircraft/Creare_Parachutist/Nasal/main.nas</file>
+   <file>Aircraft/Parachutist/Nasal/angle-trans.nas</file>
+   <file>Aircraft/Parachutist/Nasal/main.nas</file>
   </Creare>
  </nasal>
 
  <input>
-  <keyboard include="Aircraft/Creare_Parachutist/keyboard.xml"/>
+  <keyboard include="Aircraft/Parachutist/keyboard.xml"/>
  </input>
 
  <controls>
