@@ -14,7 +14,7 @@ Creare Parachutist Model for FlightGear
         <author>Creare, Richard Kaszeta, Curtis Olson</author>
 
         <flight-model>jsb</flight-model>
-        <aero>flightDynamicsModel</aero>
+        <aero>Parachutist</aero>
 
         <startup>
             <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
