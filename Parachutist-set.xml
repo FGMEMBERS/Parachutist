@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!--
 ************************************************************************
 Creare Parachutist Model for FlightGear
@@ -6,78 +7,78 @@ Creare Parachutist Model for FlightGear
 -->
 
 <PropertyList>
- <sim>
 
-  <description>Baseline model with parachute pack.</description>
-  <author>Creare, Richard Kaszeta, Curtis Olson</author>
+    <sim>
 
-  <flight-model>jsb</flight-model>
-  <aero>flightDynamicsModel</aero>
+        <description>Baseline model with parachute pack.</description>
+        <author>Creare, Richard Kaszeta, Curtis Olson</author>
 
-  <startup>
-   <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
-  </startup>
+        <flight-model>jsb</flight-model>
+        <aero>flightDynamicsModel</aero>
 
-    <sound>
-        <path>Aircraft/Parachutist/generic-sound.xml</path>
-    </sound>
+        <startup>
+            <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
+        </startup>
 
-  <panel>
-   <visibility archive="n">false</visibility>
-  </panel>
+        <sound>
+            <path>Aircraft/Parachutist/generic-sound.xml</path>
+        </sound>
 
-  <model>
-   <path archive="y">Aircraft/Parachutist/Models/Parachutist.xml</path>
-  </model>
+        <panel>
+            <visibility archive="n">false</visibility>
+        </panel>
 
-  <presets>
-    <onground type="bool">false</onground>
-    <altitude-ft>25000</altitude-ft>
-  </presets>
+        <model>
+            <path archive="y">Aircraft/Parachutist/Models/Parachutist.xml</path>
+        </model>
 
-  <view>
-   <internal archive="y">true</internal>
-   <config>
-     <x-offset-m archive="y">0.0</x-offset-m>
-     <y-offset-m archive="y">0.0</y-offset-m>
-     <z-offset-m archive="y">3.75</z-offset-m>
-     <pitch-offset-deg>0</pitch-offset-deg>
-   </config>
-  </view>
+        <presets>
+            <onground type="bool">false</onground>
+            <altitude-ft>25000</altitude-ft>
+        </presets>
 
-  <multiplay>
-    <chat_display>1</chat_display>
-    <generic>
-      <int type="bool">0</int>  <!-- smoke -->
-    </generic>
-  </multiplay>
+        <view>
+            <internal archive="y">true</internal>
+            <config>
+                <x-offset-m archive="y">0.0</x-offset-m>
+                <y-offset-m archive="y">0.0</y-offset-m>
+                <z-offset-m archive="y">3.75</z-offset-m>
+                <pitch-offset-deg>0</pitch-offset-deg>
+            </config>
+        </view>
 
-  <help>
-    <title>Creare Parachutist</title>
-    <line>F1 toggles a configuration dialog box.</line>
-    <line>Use the dialog box to select pose and</line>
-    <line>toggle smoke and trajectory markers.</line>
-    <key>
-      <name>F1</name>
-      <desc>Toggle configuration dialog box</desc>
-    </key>
-  </help>
+        <multiplay>
+            <chat_display>1</chat_display>
+            <generic>
+                <int type="bool">0</int> <!-- smoke -->
+            </generic>
+        </multiplay>
 
- </sim>
+        <help>
+            <title>Creare Parachutist</title>
+            <line>F1 toggles a configuration dialog box.</line>
+            <line>Use the dialog box to select pose and</line>
+            <line>toggle smoke and trajectory markers.</line>
+            <key>
+                <name>F1</name>
+                <desc>Toggle configuration dialog box</desc>
+            </key>
+        </help>
+    </sim>
 
- <nasal>
-  <Creare>
-   <file>Aircraft/Parachutist/Nasal/angle-trans.nas</file>
-   <file>Aircraft/Parachutist/Nasal/main.nas</file>
-  </Creare>
- </nasal>
+    <nasal>
+        <Creare>
+            <file>Aircraft/Parachutist/Nasal/angle-trans.nas</file>
+            <file>Aircraft/Parachutist/Nasal/main.nas</file>
+        </Creare>
+    </nasal>
 
- <input>
-  <keyboard include="Aircraft/Parachutist/keyboard.xml"/>
- </input>
+    <input>
+        <keyboard include="Aircraft/Parachutist/keyboard.xml"/>
+    </input>
 
- <controls>
-   <smoke alias="/sim/multiplay/generic/int[0]"/>
- </controls>
+    <controls>
+        <smoke alias="/sim/multiplay/generic/int[0]"/>
+    </controls>
 
 </PropertyList>
