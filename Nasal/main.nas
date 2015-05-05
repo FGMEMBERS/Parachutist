@@ -28,6 +28,20 @@ var Box = {
     pelvis_roll: 0,          pelvis_pitch: -15,          pelvis_yaw: 0
 };
 
+var Parachute = {
+    left_forearm_roll: 105,   left_forearm_pitch: 0,    left_forearm_yaw: 0,
+    right_forearm_roll: -105, right_forearm_pitch: 0,   right_forearm_yaw: 0,
+    left_lower_leg_roll: 0,  left_lower_leg_pitch: -35,  left_lower_leg_yaw: 0,
+    right_lower_leg_roll: 0, right_lower_leg_pitch: -35, right_lower_leg_yaw: 0,
+    left_upper_arm_roll: 80, left_upper_arm_pitch: 0,    left_upper_arm_yaw: 0,
+    right_upper_arm_roll:-80,right_upper_arm_pitch: 0,   right_upper_arm_yaw: 0,
+    left_upper_leg_roll: 20, left_upper_leg_pitch: 45,  left_upper_leg_yaw: -20,
+    right_upper_leg_roll:-20,right_upper_leg_pitch: 45, right_upper_leg_yaw: 20,
+    head_roll: 0,            head_pitch: 0,             head_yaw: 0,
+    torso_roll: 0,           torso_pitch: 0,             torso_yaw: 0,
+    pelvis_roll: 0,          pelvis_pitch: 0,            pelvis_yaw: 0
+};
+
 var Neutral = {
     left_forearm_roll: 0,    left_forearm_pitch: 0,      left_forearm_yaw: 0,
     right_forearm_roll: 0,   right_forearm_pitch: 0,     right_forearm_yaw: 0,
@@ -297,11 +311,10 @@ var mix_pose = func( dest, src, percent ) {
 var set_target_pose = func {
     var pose_name = poseNode.getValue();
     if ( pose_name == last_pose_name and pose_name != "Joystick" ) {
-	return;
-    } else {
+	    return;
+    }
 	snap_joints = 0;  
 	last_pose_name = pose_name;
-    }
 
     # set pose by name
     if ( pose_name == "Neutral" ) {
@@ -324,6 +337,8 @@ var set_target_pose = func {
 	set_pose(pose, Dorsal);
     } elsif ( pose_name == "Ventral" ) {
 	set_pose(pose, Ventral);
+    } elsif ( pose_name == "Parachute" ) {
+	set_pose(pose, Parachute);
     } elsif ( pose_name == "Joystick" ) {
 	#print("posing from flight controls");
 
@@ -578,7 +593,7 @@ var main_loop = func {
 
     var agl = getprop("/position/altitude-agl-ft");
     var descent = getprop("/velocities/vertical-speed-fps");
-    if ( agl <= end_simulation_agl and descent <= -50 and end_of_simulation == 0) {
+    if ( agl <= end_simulation_agl and descent <= 0 and end_of_simulation == 0) {
         end_of_simulation = 1;
         setprop("/sim/freeze/master", 1);
         setprop("/sim/freeze/clock", 1);

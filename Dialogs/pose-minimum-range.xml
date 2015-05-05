@@ -676,6 +676,7 @@
             <value>Right Dorsoventral</value>
             <value>Dorsal</value>
             <value>Ventral</value>
+            <value>Parachute</value>
             <binding>
                 <command>dialog-apply</command>
             </binding>
