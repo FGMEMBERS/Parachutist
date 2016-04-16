@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>parachutist-pose</name>
+  <layout>vbox</layout>
+  <x>-15</x>
+  <y>-30</y>
+
+  <group>
+    <layout>hbox</layout>
+
+    <empty><stretch>true</stretch></empty>
+
+    <text>
+      <label>Parachutist Pose</label>
+    </text>
+
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+
+      <binding>
+        <command>nasal</command>
+        <script>Creare.dialog_pose.close()</script>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>table</layout>
+
+    <!-- row zero -->
+    <text>
+      <row>0</row> <col>1</col>
+      <label>Roll</label>
+    </text>
+    <text>
+      <row>0</row> <col>2</col>
+      <label>Pitch</label>
+    </text>
+    <text>
+      <row>0</row> <col>3</col>
+      <label>Yaw</label>
+    </text>
+
+    <!-- row one -->
+    <text>
+      <row>1</row> <col>0</col>
+      <label>Left Forearm:</label>
+    </text>
+    <slider>
+      <row>1</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-forearm/roll-target</property>
+      <min>5</min>
+      <max>105</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>1</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-forearm/pitch-target</property>
+      <min>-10</min>
+      <max>35</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>1</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-forearm/yaw-target</property>
+      <min>-35</min>
+      <max>-35</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row two -->
+    <text>
+      <row>2</row> <col>0</col>
+      <label>Right Forearm:</label>
+    </text>
+    <slider>
+      <row>2</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-forearm/roll-target</property>
+      <min>-105</min>
+      <max>-5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>2</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-forearm/pitch-target</property>
+      <min>-10</min>
+      <max>35</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>2</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-forearm/yaw-target</property>
+      <min>35</min>
+      <max>35</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row three -->
+    <text>
+      <row>3</row> <col>0</col>
+      <label>Left Lower Leg:</label>
+    </text>
+    <slider>
+      <row>3</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-lower-leg/roll-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>3</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-lower-leg/pitch-target</property>
+      <min>-70</min>
+      <max>-20</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>3</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-lower-leg/yaw-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row four -->
+    <text>
+      <row>4</row> <col>0</col>
+      <label>Right Lower Leg:</label>
+    </text>
+    <slider>
+      <row>4</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-lower-leg/roll-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>4</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-lower-leg/pitch-target</property>
+      <min>-70</min>
+      <max>-20</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>4</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-lower-leg/yaw-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row five -->
+    <text>
+      <row>5</row> <col>0</col>
+      <label>Left Upper Arm:</label>
+    </text>
+    <slider>
+      <row>5</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-arm/roll-target</property>
+      <min>75</min>
+      <max>155</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>5</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-arm/pitch-target</property>
+      <min>-15</min>
+      <max>15</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>5</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-arm/yaw-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row six -->
+    <text>
+      <row>6</row> <col>0</col>
+      <label>Right Upper Arm:</label>
+    </text>
+    <slider>
+      <row>6</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-arm/roll-target</property>
+      <min>-155</min>
+      <max>-75</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>6</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-arm/pitch-target</property>
+      <min>-15</min>
+      <max>15</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>6</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-arm/yaw-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row seven -->
+    <text>
+      <row>7</row> <col>0</col>
+      <label>Left Upper Leg:</label>
+    </text>
+    <slider>
+      <row>7</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-leg/roll-target</property>
+      <min>20</min>
+      <max>35</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>7</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-leg/pitch-target</property>
+      <min>-25</min>
+      <max>-12.5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>7</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/left-leg/yaw-target</property>
+      <min>-25</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row eight -->
+    <text>
+      <row>8</row> <col>0</col>
+      <label>Right Upper Leg:</label>
+    </text>
+    <slider>
+      <row>8</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-leg/roll-target</property>
+      <min>-35</min>
+      <max>-20</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>8</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-leg/pitch-target</property>
+      <min>-25</min>
+      <max>-12.5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>8</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/right-leg/yaw-target</property>
+      <min>0</min>
+      <max>25</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row nine -->
+    <text>
+      <row>9</row> <col>0</col>
+      <label>Head:</label>
+    </text>
+    <slider>
+      <row>9</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/head/roll-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>9</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/head/pitch-target</property>
+      <min>20</min>
+      <max>50</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>9</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/head/yaw-target</property>
+      <min>-10</min>
+      <max>10</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+       <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+   </slider>
+
+    <!-- row ten -->
+    <text>
+      <row>10</row> <col>0</col>
+      <label>Torso:</label>
+    </text>
+    <slider>
+      <row>10</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/torso/roll-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>10</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/torso/pitch-target</property>
+      <min>7.5</min>
+      <max>25</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>10</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/torso/yaw-target</property>
+      <min>-5</min>
+      <max>5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+
+    <!-- row eleven -->
+    <text>
+      <row>11</row> <col>0</col>
+      <label>Pelvis:</label>
+    </text>
+    <slider>
+      <row>11</row> <col>1</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/pelvis/roll-target</property>
+      <min>0</min>
+      <max>0</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>11</row> <col>2</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/pelvis/pitch-target</property>
+      <min>-17.5</min>
+      <max>-7.5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+    <slider>
+      <row>11</row> <col>3</col>
+      <width>150</width>
+      <property>/fdm/jsbsim/Creare/pelvis/yaw-target</property>
+      <min>-5</min>
+      <max>5</max>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+	<command>nasal</command><script>Creare.snap_joints=1;</script>
+      </binding>
+    </slider>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>table</layout>
+
+    <!-- row zero -->
+    <text>
+      <row>0</row> <col>0</col>
+      <label>Preset Pose:</label>
+    </text>
+    <combo>
+      <row>0</row> <col>1</col>
+      <halign>fill</halign>
+      <stretch>true</stretch>
+      <!-- <width>150</width> -->
+      <!-- <height>25</height> -->
+      <property>/fdm/jsbsim/Creare/pose-name</property>
+      <value>Joystick</value>
+      <value>Neutral</value>
+      <value>Box</value>
+      <value>Left Translation</value>
+      <value>Right Translation</value>
+      <value>Anterior Translation</value>
+      <value>Posterior Translation</value>
+      <value>Left Dorsoventral</value>
+      <value>Right Dorsoventral</value>
+      <value>Dorsal</value>
+      <value>Ventral</value>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </combo>
+
+  </group>
+
+  <hrule/>
+
+</PropertyList>

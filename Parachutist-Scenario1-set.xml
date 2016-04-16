@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Creare Parachutist Model for FlightGear
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Baseline model with no equipment.</description>
+  <author>Creare, Richard Kaszeta, Curtis Olson</author>
+
+  <flight-model>jsb</flight-model>
+  <aero>Scenario1/flightDynamicsModel</aero>
+
+  <startup>
+   <splash-texture>Aircraft/Creare_Parachutist/Parachutist-splash.jpg</splash-texture>
+  </startup>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/Creare_Parachutist/Scenario1/Models/FlightGearParachutistModelDefinition.xml</path>
+  </model>
+
+  <presets>
+    <onground type="bool">false</onground>
+    <altitude-ft>25000</altitude-ft>
+  </presets>
+
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.0</y-offset-m>
+     <z-offset-m archive="y">3.75</z-offset-m>
+     <pitch-offset-deg>0</pitch-offset-deg>
+   </config>
+  </view>
+
+  <submodels>
+    <serviceable type="bool">1</serviceable>
+    <path>Aircraft/Creare_Parachutist/Models/submodels.xml</path>
+  </submodels>
+
+  <multiplay>
+    <chat_display>1</chat_display>
+    <generic>
+      <int type="bool">0</int>  <!-- smoke -->
+      <int type="bool">0</int>  <!-- trajectory markers -->
+    </generic>
+  </multiplay>
+
+  <help>
+    <title>Creare Parachutist</title>
+    <line>F1 toggles a configuration dialog box.</line>
+    <line>Use the dialog box to select pose and</line>
+    <line>toggle smoke and trajectory markers.</line>
+    <key>
+      <name>F1</name>
+      <desc>Toggle configuration dialog box</desc>
+    </key>
+  </help>
+
+ </sim>
+
+ <nasal>
+  <Creare>
+   <file>Aircraft/Creare_Parachutist/Nasal/angle-trans.nas</file>
+   <file>Aircraft/Creare_Parachutist/Nasal/main.nas</file>
+  </Creare>
+ </nasal>
+
+ <input>
+  <keyboard include="Aircraft/Creare_Parachutist/keyboard.xml"/>
+ </input>
+
+ <controls>
+   <smoke alias="/sim/multiplay/generic/int[0]"/>
+   <trajectory-markers alias="/sim/multiplay/generic/int[1]"/>
+ </controls>
+
+
+
+ <!--<input>
+  <keyboard>
+   <key n="79">
+    <name>O</name>
+    <desc>Open aerotow hook</desc>
+    <binding>
+     <command>property-assign</command>
+     <property>/sim/hitches/aerotow/open</property>
+     <value type="bool">true</value>
+    </binding>
+   </key>
+   <key n="100">
+     <name>d</name>
+     <desc>Open/Close door</desc>
+     <binding>
+       <command>nasal</command>
+       <script>
+         if(getprop("controls/door[0]") > 0) {
+           interpolate("controls/door[0]", 0, 1);
+         } else {
+           interpolate("controls/door[0]", 1, 1);
+         }
+       </script>
+     </binding>
+   </key>
+   <key n="111">
+    <name>o</name>
+    <desc>Lock aerotow hook</desc>
+     <binding>
+      <command>property-assign</command>
+      <property>/sim/hitches/aerotow/open</property>
+      <value type="bool">false</value>
+    </binding>
+   </key>
+  </keyboard>
+ </input>-->
+</PropertyList>

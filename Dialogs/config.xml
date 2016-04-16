@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>parachutist-config</name>
+  <layout>vbox</layout>
+  <x>-20</x>
+  <y>20</y>
+
+  <group>
+    <layout>hbox</layout>
+
+    <empty><stretch>true</stretch></empty>
+
+    <text>
+      <label>Parachutist Configuration</label>
+    </text>
+
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+
+      <binding>
+        <command>nasal</command>
+        <script>Creare.dialog_config.close()</script>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>table</layout>
+
+    <!-- row zero -->
+    <checkbox>
+      <row>0</row> <col>0</col>
+      <halign>left</halign>
+      <label>Smoke</label>
+      <property>/sim/multiplay/generic/int[0]</property>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <row>0</row> <col>1</col>
+      <halign>left</halign>
+      <label>Trajectory Markers</label>
+      <property>/sim/multiplay/generic/int[1]</property>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </checkbox>
+
+    <!-- row one -->
+    <text>
+      <row>1</row> <col>0</col>
+      <label>Flowlines:</label>
+    </text>
+    <combo>
+      <row>1</row> <col>1</col>
+      <halign>fill</halign>
+      <stretch>true</stretch>
+      <property>/Creare/flowlines</property>
+      <value>none</value>
+      <value>2d</value>
+      <value>3d</value>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </combo>
+
+  </group>
+
+  <hrule/>
+
+</PropertyList>
