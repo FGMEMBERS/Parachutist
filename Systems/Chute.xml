@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<system name="Rescue Chute">
+<system name="Chute">
   <property value="0">systems/chute/chute-cmd-norm</property>
 
-  <channel name="Rescue Chute">
-   <kinematic name="Rescue Chute Control">
+  <channel name="Chute">
+   <kinematic name="Chute Control">
      <input>systems/chute/chute-cmd-norm</input>
      <traverse>
        <setting>
@@ -17,6 +17,44 @@
      </traverse>
      <output>systems/chute/chute-reef-pos-norm</output>
    </kinematic>
+  </channel>
+
+  <channel name="Pitch">
+    <switch>
+      <default value="0"/>
+      <test value="fcs/elevator-cmd-norm">
+          systems/chute/chute-reef-pos-norm EQ 1
+      </test>
+      <output>fcs/elevator-cmd-active</output>
+    </switch>
+    <aerosurface_scale name="Elevator Control">
+      <input>fcs/elevator-cmd-active</input>
+      <gain>0.2</gain>
+      <range>
+        <min>-25</min>
+        <max>35</max>
+      </range>
+      <output>fcs/elevator-pos-rad</output>
+    </aerosurface_scale>
+  </channel>
+
+  <channel name="Roll">
+    <switch>
+      <default value="0"/>
+      <test value="fcs/aileron-cmd-norm">
+          systems/chute/chute-reef-pos-norm EQ 1
+      </test>
+      <output>fcs/aileron-cmd-active</output>
+    </switch>
+    <aerosurface_scale name="Aileron Control">
+      <input>fcs/aileron-cmd-active</input>
+      <gain>0.2</gain>
+      <range>
+        <min>-20</min>
+        <max>15</max>
+      </range>
+      <output>fcs/aileron-pos-rad</output>
+    </aerosurface_scale>
   </channel>
 
 </system>
