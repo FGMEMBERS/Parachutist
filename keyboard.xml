@@ -2,6 +2,15 @@
 
 <PropertyList>
 
+  <key n="5">
+    <name>Ctrl+E</name>
+    <desc>Eject chute</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>fdm/jsbsim/systems/chute/chute-cmd-norm</property>
+    </binding>
+  </key>
+
   <key n="257">
     <name>F1</name>
     <desc>Toggle configuration dialog</desc>

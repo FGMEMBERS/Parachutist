@@ -8,7 +8,7 @@
 	  </offsets>
 
 	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/smokeW.xml</path>
+	    <path>Aircraft/Parachutist/Models/smokeW.xml</path>
 	    <offsets>
 	      <x-m> -1.0</x-m>
 	      <y-m> 0.0</y-m>
@@ -574,15 +574,15 @@
 	  <!-- flow lines -->
 
 	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/axes.xml</path>
+	    <path>Aircraft/Parachutist/Models/axes.xml</path>
 	  </model>
 
 	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/flowlines-2d.xml</path>
+	    <path>Aircraft/Parachutist/Models/flowlines-2d.xml</path>
 	  </model>
 
 	  <model>
-	    <path>Aircraft/Creare_Parachutist/Models/flowlines-3d.xml</path>
+	    <path>Aircraft/Parachutist/Models/flowlines-3d.xml</path>
 	  </model>
 
 	</PropertyList>
