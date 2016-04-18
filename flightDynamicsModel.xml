@@ -271,23 +271,23 @@
     <!-- external chute model -->
 
     <!-- percent of 30 sq. ft. -->
-    <property value="0.66">systems/chute/chute-size-factor</property>
     <property value="0">systems/chute/chute-reef-pos-norm</property>
+    <property value="1">systems/chute/chute-size-factor</property>
 
-    <force name="chute" frame="WIND">
+    <force name="main-chute" frame="WIND">
      <function>
       <product>
        <property>aero/qbar-psf</property>
        <property>systems/chute/chute-reef-pos-norm</property>
        <property>systems/chute/chute-size-factor</property>
-       <value> 0.8 </value>	<!-- drag coefficient -->
-       <value> 380 </value>	<!-- area in sq. ft, result is 250 sq. ft. -->
+       <value> 0.9 </value>
+       <value> 250 </value>
       </product>
      </function>
      <location unit="FT">
-      <x>  0 </x>
-      <y>  0 </y>
-      <z> 0.5 </z>
+      <x> -0.50 </x>
+      <y>  0.00 </y>
+      <z>  0.47 </z>
      </location>
      <direction>
       <x>-1 </x>
@@ -300,7 +300,8 @@
 
   <system file="Chute.xml"/>
 
-  <propulsion/>
+  <propulsion>
+  </propulsion>
 
   <flight_control name="FCS: parachutist">
   </flight_control>
@@ -6157,6 +6158,7 @@
   <function name="aero/coefficient/Clt">
       <description>Roll_moment_due_to_roll_angle</description>
       <product>
+          <property>systems/chute/chute-size-factor</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
@@ -6168,6 +6170,7 @@
   <function name="aero/coefficient/Clp">
       <description>Roll_moment_due_to_roll_rate</description>
       <product>
+          <property>systems/chute/chute-size-factor</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
@@ -6203,6 +6206,7 @@
   <function name="aero/coefficient/Cmalpha">
       <description>Pitch_moment_due_to_alpha</description>
       <product>
+          <property>systems/chute/chute-size-factor</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
@@ -6223,6 +6227,7 @@
   <function name="aero/coefficient/Cmq">
       <description>Pitch_moment_due_to_pitch_rate</description>
       <product>
+          <property>systems/chute/chute-size-factor</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>

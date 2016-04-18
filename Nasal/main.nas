@@ -156,6 +156,20 @@ var Ventral = {
     pelvis_roll: 0,	     pelvis_pitch: -17.5,	 pelvis_yaw: 0
 };
 
+var Gliding = {
+    left_forearm_roll: 15,   left_forearm_pitch: -10,    left_forearm_yaw: -35,
+    right_forearm_roll: -15, right_forearm_pitch: -10,   right_forearm_yaw: 35,
+    left_lower_leg_roll: 0,  left_lower_leg_pitch: 0,    left_lower_leg_yaw: 0,
+    right_lower_leg_roll: 0, right_lower_leg_pitch: 0,   right_lower_leg_yaw: 0,
+    left_upper_arm_roll: 110,left_upper_arm_pitch: 0,    left_upper_arm_yaw: 0,
+    right_upper_arm_roll:-110,right_upper_arm_pitch: 0,  right_upper_arm_yaw: 0,
+    left_upper_leg_roll: 0,  left_upper_leg_pitch: 0,    left_upper_leg_yaw: 0,
+    right_upper_leg_roll:0,  right_upper_leg_pitch: 0,   right_upper_leg_yaw: 0,
+    head_roll: 0,            head_pitch: 0,              head_yaw: 0,
+    torso_roll: 0,           torso_pitch: 0,             torso_yaw: 0,
+    pelvis_roll: 0,          pelvis_pitch: 0,            pelvis_yaw: 0
+};
+
 # current pose (global)
 var pose = {};
 
@@ -330,30 +344,35 @@ var set_target_pose = func {
 	#print("posing from flight controls");
 
 	# set pose from flight controls
-	var aileron = getprop("/controls/flight/aileron");
-	var elevator = getprop("/controls/flight/elevator");
-	var throttle = getprop("/controls/engines/engine[0]/throttle");
+	var aileron = getprop("controls/flight/aileron");
+	var elevator = getprop("controls/flight/elevator");
+	var throttle = getprop("fdm/jsbsim/systems/throttle/throttle");
+        var gliding = getprop("fdm/jsbsim/systems/chute/chute-reef-pos-norm");
 
 	# base position
-	set_pose(pose, Box);
+        if (gliding > 0.99) {
+            set_pose(pose, Gliding);
+        } else {
+     	    set_pose(pose, Box);
 
-	if ( aileron > 0 ) {
-	    mix_pose( pose, RightDorsoventral, aileron );
-	} elsif ( aileron < 0 ) {
-	    mix_pose( pose, LeftDorsoventral, -aileron );
-	}
+	    if ( aileron > 0 ) {
+	        mix_pose( pose, RightDorsoventral, aileron );
+	    } elsif ( aileron < 0 ) {
+	        mix_pose( pose, LeftDorsoventral, -aileron );
+	    }
 
-	if ( elevator > 0 ) {
-	    mix_pose( pose, AnteriorTranslation, elevator );
-	} elsif ( elevator < 0 ) {
-	    mix_pose( pose, PosteriorTranslation, -elevator );
-	}
+	    if ( elevator > 0 ) {
+	        mix_pose( pose, AnteriorTranslation, elevator );
+	    } elsif ( elevator < 0 ) {
+	        mix_pose( pose, PosteriorTranslation, -elevator );
+	    }
 
-	if ( throttle < 0.5 ) {
-	    mix_pose( pose, Dorsal, -(throttle - 0.5) * 2 );
-	} elsif ( throttle > 0.5 ) {
-	    mix_pose( pose, Ventral, (throttle - 0.5) * 2 );
-	}
+	    if ( throttle < 0.5 ) {
+	        mix_pose( pose, Dorsal, -(throttle - 0.5) * 2 );
+	    } elsif ( throttle > 0.5 ) {
+	        mix_pose( pose, Ventral, (throttle - 0.5) * 2 );
+	    }
+        }
     }
 
     setprop("/fdm/jsbsim/Creare/left-forearm/roll-target", pose.left_forearm_roll);

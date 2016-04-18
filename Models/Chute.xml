@@ -1,0 +1,21 @@
+<PropertyList>
+
+  <path>ramair_chute.ac</path>
+  <offsets>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>90</pitch-deg>
+    <roll-deg>90</roll-deg>
+  </offsets>
+
+  <animation>
+    <name>Chute</name>
+    <type>select</type>
+    <condition>
+     <greater-than>
+      <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+      <value>0.99</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+</PropertyList>
