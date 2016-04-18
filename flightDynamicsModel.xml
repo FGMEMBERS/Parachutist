@@ -285,7 +285,7 @@
       </product>
      </function>
      <location unit="FT">
-      <x> -0.50 </x>
+      <x> -0.43 </x>
       <y>  0.00 </y>
       <z>  0.47 </z>
      </location>
@@ -301,6 +301,33 @@
   <system file="Chute.xml"/>
 
   <propulsion>
+   <engine file="dummy">
+    <location unit="IN">
+      <x>    36.00 </x>
+      <y>     0.00 </y>
+      <z>     0.00 </z>
+    </location>
+    <orient unit="DEG">
+      <pitch>     0.00 </pitch>
+       <roll>     0.00 </roll>
+        <yaw>     0.00 </yaw>
+    </orient>
+    <feed> 0 </feed>
+
+    <thruster file="direct">
+     <sense> 1 </sense>
+     <location unit="IN">
+       <x>    36.00 </x>
+       <y>     0.00 </y>
+       <z>     0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch>     0.00 </pitch>
+        <roll>     0.00 </roll>
+         <yaw>     0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
   </propulsion>
 
   <flight_control name="FCS: parachutist">

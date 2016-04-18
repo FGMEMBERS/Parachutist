@@ -170,6 +170,20 @@ var Gliding = {
     pelvis_roll: 0,          pelvis_pitch: 0,            pelvis_yaw: 0
 };
 
+var Super = {
+    left_forearm_roll: -5,   left_forearm_pitch: 0,      left_forearm_yaw: 0,  
+    right_forearm_roll: 0,   right_forearm_pitch: 0,     right_forearm_yaw: 0,
+    left_lower_leg_roll: 0,  left_lower_leg_pitch: 0,    left_lower_leg_yaw: 0,
+    right_lower_leg_roll: 0, right_lower_leg_pitch: -20, right_lower_leg_yaw: 0,
+    left_upper_arm_roll: 180,left_upper_arm_pitch: 0,    left_upper_arm_yaw: 0,
+    right_upper_arm_roll:-10,right_upper_arm_pitch: 0,   right_upper_arm_yaw: 0,
+    left_upper_leg_roll: 0,  left_upper_leg_pitch: 0,    left_upper_leg_yaw: 5,
+    right_upper_leg_roll: 0, right_upper_leg_pitch: 20,  right_upper_leg_yaw:-5,
+    head_roll: 0,            head_pitch: 60,             head_yaw: 0,
+    torso_roll: 0,           torso_pitch: 0,             torso_yaw: 0,
+    pelvis_roll: 0,          pelvis_pitch: 0,            pelvis_yaw: 0
+};
+
 # current pose (global)
 var pose = {};
 
@@ -348,6 +362,7 @@ var set_target_pose = func {
 	var elevator = getprop("controls/flight/elevator");
 	var throttle = getprop("fdm/jsbsim/systems/throttle/throttle");
         var gliding = getprop("fdm/jsbsim/systems/chute/chute-reef-pos-norm");
+        var augment = getprop("engines/engine/augmentation");
 
 	# base position
         if (gliding > 0.99) {
@@ -355,23 +370,27 @@ var set_target_pose = func {
         } else {
      	    set_pose(pose, Box);
 
-	    if ( aileron > 0 ) {
-	        mix_pose( pose, RightDorsoventral, aileron );
-	    } elsif ( aileron < 0 ) {
-	        mix_pose( pose, LeftDorsoventral, -aileron );
-	    }
+            if (augment > 0.1) { 
+                set_pose(pose, Super);
+            } else {
+	        if ( aileron > 0 ) {
+	            mix_pose( pose, RightDorsoventral, aileron );
+	        } elsif ( aileron < 0 ) {
+	            mix_pose( pose, LeftDorsoventral, -aileron );
+	        }
 
-	    if ( elevator > 0 ) {
-	        mix_pose( pose, AnteriorTranslation, elevator );
-	    } elsif ( elevator < 0 ) {
-	        mix_pose( pose, PosteriorTranslation, -elevator );
-	    }
+	        if ( elevator > 0 ) {
+	            mix_pose( pose, AnteriorTranslation, elevator );
+	        } elsif ( elevator < 0 ) {
+	            mix_pose( pose, PosteriorTranslation, -elevator );
+	        }
 
-	    if ( throttle < 0.5 ) {
-	        mix_pose( pose, Dorsal, -(throttle - 0.5) * 2 );
-	    } elsif ( throttle > 0.5 ) {
-	        mix_pose( pose, Ventral, (throttle - 0.5) * 2 );
-	    }
+	        if ( throttle < 0.5 ) {
+	            mix_pose( pose, Dorsal, -(throttle - 0.5) * 2 );
+	        } elsif ( throttle > 0.5 ) {
+	            mix_pose( pose, Ventral, (throttle - 0.5) * 2 );
+	        }
+            }
         }
     }
 

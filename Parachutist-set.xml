@@ -83,6 +83,11 @@ Creare Parachutist Model for FlightGear
    <trajectory-markers alias="/sim/multiplay/generic/int[1]"/>
  </controls>
 
+ <engines>
+  <engine>
+   <augmentation type="float">0</augmentation>
+  </engine>
+ </engines>
  <!--<input>
   <keyboard>
    <key n="79">
