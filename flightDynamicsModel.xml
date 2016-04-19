@@ -42,15 +42,31 @@
     <ixx unit="SLUG*FT2">0.980</ixx>
     <iyy unit="SLUG*FT2">1.130</iyy>
     <izz unit="SLUG*FT2">0.897</izz>
-    <ixy unit="SLUG*FT2"> 0.001 </ixy>
-    <ixz unit="SLUG*FT2"> 0.001 </ixz>
-    <iyz unit="SLUG*FT2"> 0.001 </iyz>
-    <emptywt unit="LBS">191.999</emptywt>
+    <ixy unit="SLUG*FT2">0.001</ixy>
+    <ixz unit="SLUG*FT2">0.001</ixz>
+    <iyz unit="SLUG*FT2">0.001</iyz>
+    <emptywt unit="LBS"> 0.001</emptywt>
     <location name="CG" unit="FT">
       <x>-0.488</x>
       <y>-0.000</y>
       <z>-0.010</z>
     </location>
+    <pointmass name="Falling">
+      <weight unit="LBS"> 191.998 </weight>
+      <location name="POINTMASS" unit="IN">
+                <x> -0.488 </x>
+                <y> -0.000 </y>
+                <z> -0.010 </z>
+      </location>
+    </pointmass>
+    <pointmass name="Gliding">
+      <weight unit="LBS"> 0.0 </weight>
+      <location name="POINTMASS" unit="IN">
+                <x> -0.488 </x>
+                <y> -0.000 </y>
+                <z> -8.490 </z>
+      </location>
+    </pointmass>
   </mass_balance>
 
   <ground_reactions>
@@ -285,9 +301,9 @@
       </product>
      </function>
      <location unit="FT">
-      <x> -0.43 </x>
-      <y>  0.00 </y>
-      <z>  0.47 </z>
+      <x> 0.02 </x>
+      <y> 0.00 </y>
+      <z> 0.50 </z>
      </location>
      <direction>
       <x>-1 </x>

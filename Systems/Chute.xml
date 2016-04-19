@@ -11,8 +11,12 @@
           <time>     0 </time>
        </setting>
        <setting>
+          <position> 0.1 </position>
+          <time>     0.9 </time>
+       </setting>
+       <setting>
           <position> 0.5 </position>
-          <time>     1.2 </time>
+          <time>     0.3 </time>
        </setting>
        <setting>
           <position> 1 </position>
@@ -23,18 +27,34 @@
    </kinematic>
   </channel>
 
-  <channel name="Chute Employed">
-    <switch>
+  <channel name="Chute Deployed">
+    <switch name="throttle-disable">
       <default value="/controls/engines/engine/throttle"/>
       <test value="0">
          systems/chute/chute-reef-pos-norm eq 1
       </test>
       <output>systems/throttle/throttle</output>
     </switch>
+<!--
+    <switch name="mass-location-falling">
+      <default value="191.998"/>
+      <test logic="AND" value="0">
+         systems/chute/chute-reef-pos-norm eq 1
+      </test>
+      <output>/fdm/jsbsim/inertia/pointmass-weight-lbs[0]</output>
+    </switch>
+    <switch name="mass-location-gliding">
+      <default value="0"/>
+      <test logic="AND" value="191.998">
+         systems/chute/chute-reef-pos-norm eq 1
+      </test>
+      <output>/fdm/jsbsim/inertia/pointmass-weight-lbs[1]</output>
+    </switch>
+-->
   </channel>
 
   <channel name="Pitch">
-    <switch>
+    <switch name="activate-elevator">
       <default value="0"/>
       <test value="fcs/elevator-cmd-norm">
           systems/chute/chute-reef-pos-norm EQ 1
@@ -53,7 +73,7 @@
   </channel>
 
   <channel name="Roll">
-    <switch>
+    <switch name="activate-aileron">
       <default value="0"/>
       <test value="fcs/aileron-cmd-norm">
           systems/chute/chute-reef-pos-norm EQ 1

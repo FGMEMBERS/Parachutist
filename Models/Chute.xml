@@ -8,14 +8,46 @@
   </offsets>
 
   <animation>
-    <name>Chute</name>
+    <object-name>ropes</object-name>
     <type>select</type>
     <condition>
      <greater-than>
       <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
-      <value>0.99</value>
+      <value>0.4</value>
      </greater-than>
     </condition>
+  </animation>
+
+  <animation>
+    <object-name>canopy</object-name>
+    <type>select</type>
+    <condition>
+     <greater-than>
+      <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+      <value>0.075</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <type>scale</type>
+    <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+  </animation>
+
+  <animation>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <type>rotate</type>
+    <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+    <factor>-60</factor>
+    <offset-deg>60</offset-deg>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
   </animation>
 
 </PropertyList>
