@@ -37,7 +37,7 @@ Creare Parachutist Model for FlightGear
 
   <presets>
     <onground type="bool">false</onground>
-    <altitude-ft>25000</altitude-ft>
+    <altitude-ft>12500</altitude-ft>
   </presets>
 
   <view>
@@ -115,7 +115,7 @@ Creare Parachutist Model for FlightGear
  </payload>
 
  <input>
-  <keyboard include="Aircraft/Parachutist/keyboard.xml"/>
+  <keyboard include="keyboard.xml"/>
  </input>
 
  <controls>
