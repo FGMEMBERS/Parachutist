@@ -583,19 +583,4 @@
 	    </axis>
 	  </animation>
 
-	  <!-- flow lines -->
-
-	  <model>
-	    <path>Aircraft/Parachutist/Models/axes.xml</path>
-	  </model>
-
-	  <model>
-	    <path>Aircraft/Parachutist/Models/flowlines-2d.xml</path>
-	  </model>
-
-	  <model>
-	    <path>Aircraft/Parachutist/Models/flowlines-3d.xml</path>
-	  </model>
-
 	</PropertyList>
-
