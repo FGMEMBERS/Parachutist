@@ -6333,6 +6333,7 @@
         </table>
       </product>
     </function>
+-->
     <function name="aero/force/CLq">
       <description>Lift_due_to_pitch_rate</description>
       <product>
@@ -6354,7 +6355,6 @@
         </table>
       </product>
     </function>
--->
   </axis>
   
   <axis name="ROLL">

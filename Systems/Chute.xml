@@ -91,10 +91,10 @@
 
     <fcs_function name="Parachutist Weight">
       <function>
-        <product>
-          <property>systems/chute/chute-reef-pos-norm</property>
+        <difference>
           <value>211.3</value>
-        </product>
+          <property>/fdm/jsbsim/inertia/pointmass-weight-lbs[0]</property>
+        </difference>
       </function>
       <output>/fdm/jsbsim/inertia/pointmass-weight-lbs[1]</output>
     </fcs_function>
