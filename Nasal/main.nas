@@ -157,12 +157,12 @@ var Ventral = {
 };
 
 var Gliding = {
-    left_forearm_roll: 15,   left_forearm_pitch: -10,    left_forearm_yaw: -35,
-    right_forearm_roll: -15, right_forearm_pitch: -10,   right_forearm_yaw: 35,
+    left_forearm_roll: 95,   left_forearm_pitch:  10,    left_forearm_yaw: -15,
+    right_forearm_roll: -95, right_forearm_pitch:  10,   right_forearm_yaw: 15,
     left_lower_leg_roll: 0,  left_lower_leg_pitch: 0,    left_lower_leg_yaw: 0,
     right_lower_leg_roll: 0, right_lower_leg_pitch: 0,   right_lower_leg_yaw: 0,
-    left_upper_arm_roll: 110,left_upper_arm_pitch: 0,    left_upper_arm_yaw: 0,
-    right_upper_arm_roll:-110,right_upper_arm_pitch: 0,  right_upper_arm_yaw: 0,
+    left_upper_arm_roll: 75, left_upper_arm_pitch: -15,  left_upper_arm_yaw: 0,
+    right_upper_arm_roll:-75, right_upper_arm_pitch: -15,right_upper_arm_yaw: 0,
     left_upper_leg_roll: 0,  left_upper_leg_pitch: 0,    left_upper_leg_yaw: 0,
     right_upper_leg_roll:0,  right_upper_leg_pitch: 0,   right_upper_leg_yaw: 0,
     head_roll: 0,            head_pitch: 0,              head_yaw: 0,

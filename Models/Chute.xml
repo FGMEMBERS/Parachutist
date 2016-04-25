@@ -8,12 +8,13 @@
   </offsets>
 
   <animation>
+    <object-name>pilot_chute</object-name>
     <object-name>ropes</object-name>
     <type>select</type>
     <condition>
      <greater-than>
       <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
-      <value>0.4</value>
+      <value>0.92</value>
      </greater-than>
     </condition>
   </animation>
@@ -37,6 +38,7 @@
   </animation>
 
   <animation>
+    <object-name>pilot_chute</object-name>
     <object-name>canopy</object-name>
     <object-name>ropes</object-name>
     <type>rotate</type>
@@ -49,5 +51,32 @@
      <z>0</z>
    </axis>
   </animation>
+
+  <animation>
+    <object-name>pilot_chute</object-name>
+    <type>rotate</type>
+    <property>fdm/jsbsim/aero/alpha-deg</property>
+    <center>
+     <z-m>6.254</z-m>
+    </center>
+    <axis>
+     <x>0</x>
+     <y>-1</y>
+     <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <object-name>pilot_chute</object-name>
+    <type>rotate</type>
+    <property>fdm/jsbsim/aero/beta-deg</property>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+  </animation>
+
+
 
 </PropertyList>
