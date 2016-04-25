@@ -10,7 +10,7 @@ Creare Parachutist Model for FlightGear
  <sim>
 
   <description>Baseline model with parachute pack.</description>
-  <author>Creare, Richard Kaszeta, Curtis Olson (Skydiver), Erik Hofman (Parachute FDM and integration)</author>
+  <author>Creare, Richard Kaszeta, Curtis Olson (Skydiver), Erik Hofman (Parachute FDM and integration), Nicolas Raymond (Parachute texture)</author>
   <status>beta</status>
   <rating>
    <FDM type="int">4</FDM>
