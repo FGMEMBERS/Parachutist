@@ -9,6 +9,13 @@
     <filecreationdate> 2010-01-01 </filecreationdate>
     <version> $Id: parachutist_FDM.xml 2011/05/23$ </version>
     <description> Parachutist </description>
+
+<!--
+    Reference:
+    CFD Calculation of Stability and Control Derivatives For Ram-Air Parachutes
+    http://www.cobaltcfd.com/pdfs/2016/AIAA-2016-1536.pdf
+-->
+
   </fileheader>
 
   <metrics>
