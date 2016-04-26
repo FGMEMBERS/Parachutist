@@ -33,6 +33,21 @@
       </test>
       <output>systems/throttle/throttle</output>
     </switch>
+
+    <fcs_function name="Pilot Chute Animation">
+      <function>
+        <pow>
+          <value>2.8</value>
+          <sin>
+            <product>
+              <value>3.1415</value>
+              <property>systems/chute/chute-reef-pos-norm</property>
+            </product>
+          </sin>
+        </pow>
+      </function>
+      <output>systems/chute/pilot-chute-pos</output>
+    </fcs_function>
   </channel>
 
   <channel name="Chute Deployed">
