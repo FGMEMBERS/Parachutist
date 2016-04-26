@@ -68,7 +68,7 @@
       <output>fcs/pitch-cmd-norm</output>
    </summer>
 
-    <fcs_function name="Pitch Trim Summer">
+    <fcs_function name="Elevon Summer">
       <function>
         <sum>
           <property>fcs/pitch-cmd-norm</property>

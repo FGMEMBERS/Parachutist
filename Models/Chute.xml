@@ -56,9 +56,21 @@
   <animation>
     <type>translate</type>
     <object-name>pilot_chute</object-name>
-    <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+     <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property> 
     <factor>6.254</factor>
     <offset-m>-6.254</offset-m>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>pilot_chute</object-name>
+    <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
+    <factor>2.234</factor>
+    <offset-m>-2.234</offset-m>
     <axis>
      <x>0</x>
      <y>0</y>
@@ -94,6 +106,20 @@
 
   <animation>
     <type>scale</type>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <use-personality>true</use-personality>
+    <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
+    <x-min>1.0</x-min>
+    <y-min>1.0</y-min>
+    <z-min>1.0</z-min>
+    <x-factor>0.5</x-factor>
+    <y-factor>0.0</y-factor>
+    <z-factor>1.0</z-factor>
+  </animation> 
+
+  <animation>
+    <type>scale</type>
     <object-name>pilot_chute</object-name>
     <use-personality>true</use-personality>
     <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
@@ -107,6 +133,5 @@
      <z-m>6.254</z-m>
     </center>
   </animation>
-
 
 </PropertyList>
