@@ -37,13 +37,13 @@
     <fcs_function name="Pilot Chute Animation">
       <function>
         <pow>
-          <value>2.8</value>
           <sin>
             <product>
-              <value>3.1415</value>
+              <value>3.14159</value>
               <property>systems/chute/chute-reef-pos-norm</property>
             </product>
           </sin>
+          <value>0.3</value>
         </pow>
       </function>
       <output>systems/chute/pilot-chute-pos</output>
