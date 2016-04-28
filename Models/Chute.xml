@@ -1,0 +1,136 @@
+<PropertyList>
+
+  <path>ramair_chute.ac</path>
+  <offsets>
+    <heading-deg>90</heading-deg>
+    <pitch-deg>90</pitch-deg>
+    <roll-deg>90</roll-deg>
+  </offsets>
+
+  <animation>
+    <type>select</type>
+    <object-name>pilot_chute_ropes</object-name>
+    <object-name>ropes</object-name>
+    <condition>
+     <greater-than>
+      <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+      <value>0.52</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>drogue_chute</object-name>
+    <object-name>canopy</object-name>
+    <condition>
+     <greater-than>
+      <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+      <value>0.075</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pilot_chute</object-name>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property>
+    <factor>-60</factor>
+    <offset-deg>60</offset-deg>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>pilot_chute</object-name>
+     <property>fdm/jsbsim/systems/chute/chute-reef-pos-norm</property> 
+    <factor>6.254</factor>
+    <offset-m>-6.254</offset-m>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>pilot_chute</object-name>
+    <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
+    <factor>0.5</factor>
+    <offset-m>-0.0</offset-m>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pilot_chute</object-name>
+    <property>fdm/jsbsim/aero/alpha-deg</property>
+    <offset-deg>-10</offset-deg>
+    <center>
+     <z-m>6.254</z-m>
+    </center>
+    <axis>
+     <x>0</x>
+     <y>-1</y>
+     <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pilot_chute</object-name>
+    <property>fdm/jsbsim/aero/beta-deg</property>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>canopy</object-name>
+    <object-name>ropes</object-name>
+    <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
+    <x-min>1.0</x-min>
+    <y-min>1.0</y-min>
+    <z-min>1.0</z-min>
+    <x-factor>0.5</x-factor>
+    <y-factor>0.0</y-factor>
+    <z-factor>1.5</z-factor>
+  </animation> 
+
+  <animation>
+    <type>scale</type>
+    <object-name>pilot_chute</object-name>
+    <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
+    <x-min>0.8</x-min>
+    <y-min>1.0</y-min>
+    <z-min>1.0</z-min>
+    <x-factor>0.5</x-factor>
+    <y-factor>1.5</y-factor>
+    <z-factor>1.5</z-factor>
+    <center>
+     <z-m>6.254</z-m>
+    </center>
+  </animation>
+
+</PropertyList>

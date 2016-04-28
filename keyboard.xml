@@ -2,6 +2,7 @@
 
 <PropertyList>
 
+<<<<<<< HEAD
     <key n="257">
         <name>F1</name>
         <desc>Toggle configuration dialog</desc>
@@ -30,3 +31,61 @@
     </key>
 
 </PropertyList>
+=======
+  <key n="257">
+    <name>F1</name>
+    <desc>Toggle configuration dialog</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Creare.dialog_config.toggle()</script>
+    </binding>
+  </key>
+
+  <key n="258">
+    <name>F2</name>
+    <desc>Toggle posing dialog</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Creare.dialog_pose.toggle()</script>
+    </binding>
+  </key>
+
+  <key n="68">
+    <name>D</name>
+    <desc>Deploy chute</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>fdm/jsbsim/systems/chute/chute-cmd-norm</property>
+    </binding>
+  </key>
+
+  <key n="83">
+    <name>S</name>
+    <desc>Toggle smoke</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>sim/multiplay/generic/int[0]</property>
+    </binding>
+  </key>
+
+  <key n="19">
+    <name>Ctrl+S</name>
+    <desc>Rescue mode</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>engines/engine/augmentation</property>
+    </binding>
+  </key>
+
+  <key n="5">	<!-- legacy support -->
+    <name>Ctrl+E</name>
+    <desc>Eject chute</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>fdm/jsbsim/systems/chute/chute-cmd-norm</property>
+    </binding>
+  </key>
+
+</PropertyList>
+
+>>>>>>> svn/master

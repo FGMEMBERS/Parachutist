@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Follows the form of some aircraft "shadow" implementations -->
+
+<PropertyList>
+
+  <path>CFD-Parachutist-Solution-3d.ac</path>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <roll-deg>180</roll-deg>
+  </offsets>
+
+  <animation>
+    <type>select</type>
+    <nopreview/>
+    <object-name>flowlines</object-name>
+    <condition>
+      <equals>
+	<property>/Creare/flowlines</property>
+	<value>3d</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <!-- the first 3 animation sections orient the flowlines back to 0, 0, 0 in NED space -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flowlines</object-name>
+    <property>/orientation/roll-deg</property>
+    <factor>-1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flowlines</object-name>
+    <property>/orientation/pitch-deg</property>
+    <factor>1.0</factor>
+    <offset-deg>90</offset-deg>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flowlines</object-name>
+    <property>/orientation/heading-deg</property>
+    <factor>-1.0</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flowlines</object-name>
+    <property>/Creare/flowline-heading-deg</property>
+    <factor>1.0</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

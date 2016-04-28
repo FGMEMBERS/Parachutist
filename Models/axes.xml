@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Follows the form of some aircraft "shadow" implementations -->
+
+<PropertyList>
+
+  <path>axes.ac</path>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <!-- <roll-deg>180</roll-deg> -->
+  </offsets>
+
+</PropertyList>
+

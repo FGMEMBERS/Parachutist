@@ -1,0 +1,47 @@
+Please visit the following link for more information:
+http://www.flightgear.org/tours/sky-diving-visualization/
+
+Creare, Inc., an R+D research firm in Hanover, NH, under funding from the
+US Army, developed a Computation Fluid Dynamics toolkit for analyzing jumpers
+and their equipment, and model the resulting configurations in FlightGear.
+
+Make sure you specify  an initial altitude otherwise you will just be sitting
+at the end of the runway working on your tan.
+
+Start FlightGear and select either:
+  --aircraft=Parachutist-Scenario1 --altitude=10000
+or
+  --aircraft=Parachutist-Scenario2 --altitude=10000
+
+Press F1 and F2 to toggle the two available dialog boxes on/off.
+
+You can manipulate the joint poses individually or select from a set of
+pre-defined poses, or select “Joystick” control and fly with a joystick
+(or keyboard or mouse) similar to flying a helicopter or airplane.
+
+
+Credits
+-------------
+* Dietz, A. J., Kaszeta, R. W., Cameron, B., Micka, D. J., Deserranno, D. and
+  Craley, J.”A CFD Toolkit for Modeling Parachutists in Freefall”, presented at
+  the 21st AIAA Decelerators Conference in Dublin, Ireland, 23-26 May 2011.
+  Paper AIAA 2011-2589.
+
+* The Creare Freefalling Parachutist model was developed by Anthony Dietz
+  (Principal Investigator), Richard Kaszeta , Benjamin Cameron, Daniel Micka,
+  and Dimitri Deserranno of Creare, Inc., as part of an SBIR Phase II project
+  sponsored by the U.S. Army RDECOM Acquisition Center under Contract No.
+  W91CRB-08-C-0135. Additional contributions we made by Curt Olson and
+  Jon S. Berndt as consultants. The resulting parachutist model is unvalidated
+  and therefore, should not be used other than for demonstration purposes. Any
+  opinions, findings and conclusions or recommendations expressed in this
+  material are those of the authors and do not necessarily reflect the views of
+  the US Army RDECOM Acquisition Center.  Due to the significant contributions
+  made to the project by several open source developers,  Creare has released a
+  version of the resulting parachutist model to the open source community for
+  continued development and use.  The FFTK itself continues development as a
+  proprietary Creare project. For information on the FFTK itself, please
+  contact Richard Kaszeta at rwk@creare.com, or 603-643-3800.
+
+* Flightgear modeling, animation, and scripting – Curtis L. Olson
+

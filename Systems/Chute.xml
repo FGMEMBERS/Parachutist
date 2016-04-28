@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<system name="Chute">
+  <property value="0">systems/chute/chute-cmd-norm</property>
+
+  <channel name="Chute Eject">
+   <kinematic name="Chute Control">
+     <input>systems/chute/chute-cmd-norm</input>
+     <traverse>
+       <setting>
+          <position> 0 </position>
+          <time>     0 </time>
+       </setting>
+       <setting>
+          <position> 0.1 </position>
+          <time>     0.9 </time>
+       </setting>
+       <setting>
+          <position> 0.5 </position>
+          <time>     0.3 </time>
+       </setting>
+       <setting>
+          <position> 1 </position>
+          <time>     0.3 </time>
+       </setting>
+     </traverse>
+     <output>systems/chute/chute-reef-pos-norm</output>
+   </kinematic>
+
+   <switch name="throttle-disable">
+      <default value="/controls/engines/engine/throttle"/>
+      <test value="0">
+         systems/chute/chute-reef-pos-norm gt 0.7
+      </test>
+      <output>systems/throttle/throttle</output>
+    </switch>
+
+    <fcs_function name="Pilot Chute Animation">
+      <function>
+        <pow>
+          <sin>
+            <product>
+              <value>3.14159</value>
+              <property>systems/chute/chute-reef-pos-norm</property>
+            </product>
+          </sin>
+          <value>0.3</value>
+        </pow>
+      </function>
+      <output>systems/chute/pilot-chute-pos</output>
+    </fcs_function>
+  </channel>
+
+  <channel name="Chute Deployed">
+    <switch name="Chute Force Disable">
+      <default value="1"/>
+      <test value="0">
+         systems/chute/chute-reef-pos-norm eq 1
+      </test>
+      <output>systems/chute/chute-size-factor</output>
+    </switch>
+
+    <switch name="Skydiver disable">
+      <default value="1"/>
+      <test value="1">
+         systems/chute/chute-reef-pos-norm eq 1
+      </test>
+      <output>systems/chute/disabled</output>
+    </switch>
+
+    <switch name="Parachutist enable">
+      <default value="0"/>
+      <test value="1">
+         systems/chute/chute-reef-pos-norm eq 1
+      </test>
+      <output>systems/chute/enabled</output>
+    </switch>
+   <kinematic name="Parachutist Control">
+     <input>systems/chute/enabled</input>
+     <traverse>
+       <setting>
+          <position> 0 </position>
+          <time>     0 </time>
+       </setting>
+       <setting>
+          <position> 1 </position>
+          <time>     2 </time>
+       </setting>
+     </traverse>
+     <output>systems/chute/enabled-late</output>
+   </kinematic>
+  </channel>
+
+  <channel name="Inertia">
+    <fcs_function name="Skydiver Weight">
+      <function>
+        <product>
+          <difference>
+            <value>1</value>
+            <property>systems/chute/chute-reef-pos-norm</property>
+          </difference>
+          <value>211.3</value>
+        </product>
+      </function>
+      <output>/fdm/jsbsim/inertia/pointmass-weight-lbs[0]</output>
+    </fcs_function>
+
+    <fcs_function name="Parachutist Weight">
+      <function>
+        <difference>
+          <value>211.3</value>
+          <property>/fdm/jsbsim/inertia/pointmass-weight-lbs[0]</property>
+        </difference>
+      </function>
+      <output>/fdm/jsbsim/inertia/pointmass-weight-lbs[1]</output>
+    </fcs_function>
+  </channel>
+
+</system>
