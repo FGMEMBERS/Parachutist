@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+  <name>wingflex</name>
+  <inherits-from>Effects/model-wingflex-organic</inherits-from>
+  <parameters>
+    <wingflex-alpha>0</wingflex-alpha>
+    <wingflex-trailing-alpha><use>/fdm/jsbsim/systems/animation/left-aileron-deg</use></wingflex-trailing-alpha>
+    <wingsweep-factor>0.0</wingsweep-factor>
+  </parameters>
+
+  <generate>
+    <tangent type="int">6</tangent>
+    <binormal type="int">7</binormal>
+  </generate>
+
+  <technique n="4">
+   <pass>
+     <program>
+       <attribute>
+         <name>tangent</name>
+         <index>6</index>
+       </attribute>
+       <attribute>
+         <name>binormal</name>
+         <index>7</index>
+       </attribute>
+     </program>
+   </pass>
+  </technique>
+
+  <technique n="7">
+    <pass>
+      <program>
+        <attribute>
+          <name>tangent</name>
+          <index>6</index>
+        </attribute>
+        <attribute>
+          <name>binormal</name>
+          <index>7</index>
+        </attribute>
+      </program>
+    </pass>
+  </technique>
+
+  <technique n="9">
+    <pass>
+      <program>
+        <attribute>
+          <name>tangent</name>
+          <index>6</index>
+        </attribute>
+        <attribute>
+          <name>binormal</name>
+          <index>7</index>
+        </attribute>
+      </program>
+    </pass>
+  </technique>
+
+</PropertyList>

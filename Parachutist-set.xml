@@ -65,6 +65,13 @@ Creare Parachutist Model for FlightGear
     <path>Aircraft/Parachutist/Models/submodels.xml</path>
   </submodels>
 
+  <systems>
+   <property-rule n="100">
+    <name>animation</name>
+    <path>Systems/Animation.xml</path>
+   </property-rule>
+  </systems>
+
   <multiplay>
     <chat_display>1</chat_display>
     <generic>

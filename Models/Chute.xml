@@ -4,8 +4,28 @@
   <offsets>
     <heading-deg>90</heading-deg>
     <pitch-deg>90</pitch-deg>
-    <roll-deg>90</roll-deg>
+    <roll-deg>0</roll-deg>
   </offsets>
+
+  <effect>
+    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexR</inherits-from>
+    <object-name>seg12</object-name>
+    <object-name>seg34</object-name>
+    <object-name>seg56</object-name>
+    <object-name>skirt_r</object-name>
+    <object-name>ropes_r</object-name>
+    <object-name>control_r</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexL</inherits-from>
+    <object-name>seg910</object-name>
+    <object-name>seg1112</object-name>
+    <object-name>seg1314</object-name>
+    <object-name>skirt_l</object-name>
+    <object-name>ropes_l</object-name>
+    <object-name>control_l</object-name>
+  </effect>
 
   <animation>
     <type>select</type>
@@ -47,8 +67,8 @@
     <factor>-60</factor>
     <offset-deg>60</offset-deg>
     <axis>
-     <x>0</x>
-     <y>1</y>
+     <x>-1</x>
+     <y>0</y>
      <z>0</z>
    </axis>
   </animation>
@@ -88,8 +108,8 @@
      <z-m>6.254</z-m>
     </center>
     <axis>
-     <x>0</x>
-     <y>-1</y>
+     <x>1</x>
+     <y>0</y>
      <z>0</z>
    </axis>
   </animation>
@@ -101,7 +121,7 @@
     <axis>
      <x>0</x>
      <y>0</y>
-     <z>-1</z>
+     <z>1</z>
    </axis>
   </animation>
 
@@ -122,11 +142,11 @@
     <type>scale</type>
     <object-name>pilot_chute</object-name>
     <property>fdm/jsbsim/systems/chute/pilot-chute-pos</property>
-    <x-min>0.8</x-min>
-    <y-min>1.0</y-min>
+    <x-min>1.0</x-min>
+    <y-min>0.8</y-min>
     <z-min>1.0</z-min>
-    <x-factor>0.5</x-factor>
-    <y-factor>1.5</y-factor>
+    <x-factor>1.5</x-factor>
+    <y-factor>0.5</y-factor>
     <z-factor>1.5</z-factor>
     <center>
      <z-m>6.254</z-m>
