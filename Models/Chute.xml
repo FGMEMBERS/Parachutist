@@ -13,17 +13,19 @@
     <object-name>seg34</object-name>
     <object-name>seg56</object-name>
     <object-name>skirt_r</object-name>
-    <object-name>ropes_r</object-name>
+    <object-name>chords_r</object-name>
     <object-name>control_r</object-name>
   </effect>
 
   <effect>
     <inherits-from>Aircraft/Parachutist/Models/Effects/wingflexL</inherits-from>
+<object-name>seg78</object-name>
+<object-name>chords_c</object-name>
     <object-name>seg910</object-name>
     <object-name>seg1112</object-name>
     <object-name>seg1314</object-name>
     <object-name>skirt_l</object-name>
-    <object-name>ropes_l</object-name>
+    <object-name>chords_l</object-name>
     <object-name>control_l</object-name>
   </effect>
 
