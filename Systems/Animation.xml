@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+  <filter>
+   <type>gain</type>
+   <gain>-1.0</gain>
+   <input>/fdm/jsbsim/fcs/left-elevon-pos-norm</input>
+   <output>/fdm/jsbsim/systems/animation/left-aileron-deg</output>
+  </filter>
+
+  <filter>
+   <type>gain</type>
+   <gain>-1.0</gain>
+   <input>/fdm/jsbsim/fcs/right-elevon-pos-norm</input>
+   <output>/fdm/jsbsim/systems/animation/right-aileron-deg</output>
+  </filter>
+
+</PropertyList>
