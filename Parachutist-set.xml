@@ -15,8 +15,8 @@ Creare Parachutist Model for FlightGear
   <rating>
    <FDM type="int">4</FDM>
    <systems type="int">4</systems>
-   <model type="int">3</model>
-   <cockpit type="int">0</cockpit>
+   <model type="int">4</model>
+   <cockpit type="int">3</cockpit>
   </rating>
 
   <tags>
@@ -34,6 +34,10 @@ Creare Parachutist Model for FlightGear
   <model>
    <path>Aircraft/Parachutist/Models/ModelDefinition.xml</path>
   </model>
+
+  <sound>
+   <path>Aircraft/Parachutist/sound.xml</path>
+  </sound>
 
   <presets>
     <onground type="bool">false</onground>
@@ -102,9 +106,6 @@ Creare Parachutist Model for FlightGear
    <file>Aircraft/Parachutist/Nasal/angle-trans.nas</file>
    <file>Aircraft/Parachutist/Nasal/main.nas</file>
   </Creare>
-  <Parachutist>
-   <file>Aircraft/Parachutist/Nasal/parachutist.nas</file>
-  </Parachutist>
  </nasal>
 
  <payload>
