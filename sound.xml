@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+
+  <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>Sounds/wind.wav</path>
+   <property>velocities/airspeed-kt</property>
+   <volume>
+    <property>position/altitude-ft</property>
+    <factor>-0.000015</factor>
+    <offset>1.0</offset>
+    <min>0.1</min>
+    <max>1.0</max>
+   </volume>
+   <volume>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.015</factor>
+     <min>0.03</min>
+     <max>1.2</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.003</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </wind>
+
+</fx>
+ 
+</PropertyList>
