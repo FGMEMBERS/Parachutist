@@ -105,6 +105,7 @@ Creare Parachutist Model for FlightGear
   <Creare>
    <file>Aircraft/Parachutist/Nasal/angle-trans.nas</file>
    <file>Aircraft/Parachutist/Nasal/main.nas</file>
+   <file>Aircraft/Parachutist/Nasal/iqone.nas</file>
   </Creare>
  </nasal>
 
