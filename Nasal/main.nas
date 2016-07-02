@@ -1244,7 +1244,7 @@ var main_loop = func {
     set_target_pose();
     update_pose( dt );
     update_jsbsim();
-    update_display();
+#   update_display();
     model_heading();
 
     var agl = getprop("/position/altitude-agl-ft");
@@ -1278,8 +1278,8 @@ var setup_joint_limits = func {
 setlistener("/sim/signals/fdm-initialized",
 	    func {
 	        setprop("/Creare/flowlines", "none");
-		update_display();
-		setup_display();
+#		update_display();
+#		setup_display();
 		setup_joint_limits();
 		main_loop();
 	    });
