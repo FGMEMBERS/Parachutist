@@ -10,6 +10,9 @@ Creare Parachutist Model for FlightGear
  <sim>
 
   <description>Baseline model with parachute pack.</description>
+  <long-description>
+   Parachuting, or skydiving, is a method of transiting from a high point to Earth with the aid of gravity, involving the control of speed during the descent with the use of a parachute. It may involve more or less free-fall, a time during which the parachute has not been deployed and the body gradually accelerates to terminal velocity.
+  </long-description>
   <author>Creare, Richard Kaszeta, Curtis Olson (Skydiver), Erik Hofman (Parachute FDM and integration), Nicolas Raymond (Parachute texture)</author>
   <status>beta</status>
   <rating>
@@ -21,7 +24,7 @@ Creare Parachutist Model for FlightGear
 
   <tags>
    <tag>glider</tag>
-   <tag> unpowered</tag>
+   <tag>unpowered</tag>
   </tags>
 
   <flight-model>jsb</flight-model>

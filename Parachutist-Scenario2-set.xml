@@ -13,6 +13,9 @@ Creare Parachutist Model for FlightGear
 
   <flight-model>jsb</flight-model>
   <aero>Scenario2/flightDynamicsModel</aero>
+  <tags>
+   <tag>free-fall</tag>
+  </tags>
 
   <startup>
    <splash-texture>Aircraft/Parachutist/Parachutist-splash.jpg</splash-texture>
